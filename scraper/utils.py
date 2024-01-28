@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
 from .models import WebScrape
 import re
 
@@ -22,7 +21,7 @@ def scrap_wiki(url):
                 if data_cell:
                    data_text = re.sub(r'\[\d+\]', '', data_cell.text.strip())                
                    info_box[header_text ] = data_text.replace('\n','')
-      print(info_box)
+      
       wiki_page = WebScrape.objects.create(url=url, title=title, info=info_box)
       wiki_page.save()
       return wiki_page.id            

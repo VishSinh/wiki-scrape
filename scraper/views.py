@@ -15,7 +15,6 @@ def home(requests):
         return render(requests,'home.html')    
 
     except Exception as e:
-        print_exc(e)
         return JsonResponse({'message':'Somethingdsada went wrong!'})
 
 
