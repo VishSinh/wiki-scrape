@@ -1,0 +1,31 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+       .navbar {
+            background-color: #1cd4d1;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white">Wiki Scraper</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn  text-white bg-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+        {% block content %}
+        {% endblock %}
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

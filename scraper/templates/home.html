@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container bg-secondary mt-5 py-2">
+        <h1 class="mt- text-white text-center">Wikipedia Scraper</h1>
+        <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <div class="form-group text-center">
+                <label for="wiki_url " class="text-white">Website URL:</label>
+                <input type="text" class="form-control" id="wiki_url" name="wiki_url" placeholder="Enter Website URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary my-2 ">Scrap</button>
+        </form>
+    </div>
+
+    {% endblock %}

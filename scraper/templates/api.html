@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center mt-3 text-secondary" >Scrap Data</h2>
+<div class="container rounded py-3 mt-3 bg-info">
+    <h1 class="mt-4 "> "{{ data.title }}"</h1>
+    <div class="card mt-4  ">
+        <div class="card-body">
+            <h5 class="card-title"> Title: {{ data.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Video URL: <a href="{{ data.url }}">{{ data.url }}</a></h6>
+            <p class="card-text fw-bold"><strong>Scrap Data:</strong> {{ data.info }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
